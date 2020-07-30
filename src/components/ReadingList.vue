@@ -5,7 +5,7 @@
             <a class="text-sm text-blue-500 hover:underline cursor-pointer" @click="sortBooks">Sort A-Z</a>
         </div>
         
-         <div v-if="savedBooks.length" class="flex flex-wrap">
+         <div v-if="savedBooks.length" class="flex flex-wrap lg:justify-center">
             <div 
                 v-for="(file, index) in savedBooks" 
                 :key="index" 
