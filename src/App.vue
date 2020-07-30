@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="flex min-h-screen flex-col">
+    <Navbar></Navbar>
+      <div class="grid grid-cols-1 lg:grid-cols-4">
+        <div class=" col-span-1 border p-5">
+          <ReadingList></ReadingList>
+        </div>
+        <div class="col-span-3 border p-5">
+          <router-view></router-view>
+        </div>
+        
+      </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Navbar from '@/components/Navbar'
+import ReadingList from '@/components/ReadingList'
 
 export default {
-  name: 'App',
+  name: 'Home',
   components: {
-    HelloWorld
+    Navbar,
+    ReadingList
   }
 }
+
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
