@@ -3,7 +3,7 @@ var path = require('path');
 var serveStatic = require('serve-static');
 
 app = express();
-app.use(serveStatic("public", { 'index': ['index.html', 'index.htm'] }));
+app.use(serveStatic(__dirname + "/dist"));
 
 var port = process.env.PORT || 5000;
 
